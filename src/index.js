@@ -1,4 +1,3 @@
 import './static/sass/index.scss'
-alert('ojaio')
+import './static/sass/menu.scss'
 const app = document.querySelector('#app')
-console.log(app)
