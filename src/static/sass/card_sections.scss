@@ -1,0 +1,115 @@
+$background_body:#292a30;
+$background_secundary : #2c2e35;
+$shadows_secundary:rgba(46, 46, 46,.6);
+$text_color_black:#280008;
+$text_color_white:rgb(224, 224, 224);
+.knowlege{
+    // scroll-snap-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    // width: 50rem;
+    // height: 50rem;
+    margin: 2rem;
+    .knowlege_card{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        cursor: pointer;
+        position: relative;
+        width: 15rem;
+        height: 10rem;
+        text-align: center;
+        background-color: $background_body;
+        border-radius: 5px;
+        h3{
+            z-index: 10;
+        }
+        div{
+            // width: 4rem;
+            height: 5rem;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            img{
+                height: 100%;    
+            }
+        }
+        section{
+            // background-color: $background_body;
+            background-color: inherit;
+            width: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity .3s ease-in, transform .5s ease-in;
+            text-align: center;
+            z-index: 2;
+            border-radius: 0 0 5px 5px;
+            transform: translateY(-1.5rem);
+            // animation: section_hide .3s forwards;
+        }
+
+    }
+    .knowlege_card:hover{
+        section{
+            opacity: 1;
+            transform: translateY(2rem);
+        }
+    }
+}
+
+.js{
+    background-color: #F2DA40 !important;
+    div{
+        background-image: url("../assets/logos/js.svg");
+        
+    }
+}
+.react{
+    background-color: #51469E !important;
+    div{
+        background-image: url("../assets/logos/react.svg");
+    }
+}
+.node{
+    background-color: #AEC64D !important;
+    div{
+        background-image: url("../assets/logos/nodejs.svg");
+    }
+}
+.mysql{
+    background-color: #EB8647 !important;
+    div{
+        background-image: url("../assets/logos/mysql.svg");
+    }
+}
+.mongo{
+    background-color: #67AB33 !important;
+    div{
+        background-image: url("../assets/logos/react.svg");
+    }
+}
+.docker{
+    background-color: #6DC2C5 !important;
+    div{
+        background-image: url("../assets/logos/docker.svg");
+    }
+}
+.googlecloud{
+    background-color: #E63946 !important;
+    div{
+        background-image: url("../assets/logos/google_cloud_v2.svg");
+    }
+}
+.python{
+    background-color: #425EB3 !important;
+    div{
+        background-image: url("../assets/logos/python.svg");
+    }
+}
+.rust{
+    background-color: #ED9158 !important;
+    div{
+        background-image: url("../assets/logos/rust.png");
+    }
+}

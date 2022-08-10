@@ -7,6 +7,7 @@ module.exports = {
     entry: {
         index:'./src/index.js',
         // index2:'./src/index2.js',
+        // router:'./src/pages/router.js'
     },
     output: {
         filename: '[name].js',
@@ -48,6 +49,10 @@ module.exports = {
                     'sass-loader'
                 ],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+              },
         ]
     },
     optimization: {
@@ -59,6 +64,7 @@ module.exports = {
             filename: 'index.html', 
             template: './src/index.html',
             chunks:['index']
+            // chunks:['index','router']
         }),
         // new HtmlWebpackPlugin({ 
         //     filename: 'index2.html',

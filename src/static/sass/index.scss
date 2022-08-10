@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-$background_body:#780116;
-$background_secundary : #F7B538;
+$background_body:#292a30;
+$background_secundary : #2c2e35;
 $shadows_secundary:rgba(46, 46, 46,.6);
 $text_color_black:#280008;
 $text_color_white:rgb(224, 224, 224);
@@ -9,10 +9,20 @@ $text_color_white:rgb(224, 224, 224);
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-snap-type: y mandatory;
+}
 body{
     background-color: $background_body;
+    margin-left: 3.5rem;
+
+    
+    // overflow-y: scroll;
 }
 .header{
+    height: 60rem;
+    // scroll-snap-align: start;
+
     font-family: 'Noto Sans', sans-serif;
     color: $text_color_black;
     background-color: $background_secundary ;
@@ -25,12 +35,6 @@ body{
     .header_charge{
         grid-column: 1;
         // border: #780116 2px solid;
-        h1{
-    
-        }
-        p{
-    
-        }
     }
     .header_i{
         padding-right: 2rem;
@@ -61,32 +65,7 @@ body{
 
 main{
     margin-top: 2rem;
-    background-color: #F7B538;
+    background-color: $background_secundary;
     padding: 1rem;
 }
 
-.knowlege{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    // width: 50rem;
-    // height: 50rem;
-    margin: 2rem;
-    .knowlege_card{
-        
-        position: relative;
-        width: 15rem;
-        height: 10rem;
-        overflow: hidden;
-        background-color: $background_body;
-        
-        div{
-            // width: 4rem;
-            height: 4rem;
-            overflow: hidden;
-            img{
-                height: 100%;    
-            }
-        }
-    }
-}
