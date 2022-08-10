@@ -1,5 +1,9 @@
 import '../static/sass/knowlege_page.scss'
-export default function RenderKnowlege(app,name,mousePointer){
+export default function RenderKnowlege(app,name,data){
+    const {
+        mousePointer,
+        currentColor
+    } = data
     // console.log(mousePointer)
     const {x:mouseX,y:mouseY} = mousePointer
 
@@ -11,9 +15,9 @@ export default function RenderKnowlege(app,name,mousePointer){
     sectionPage.classList.add('knowlege_page')
     sectionPage.classList.add('name')
     sectionPage.textContent = name
-    
     sectionPage.style.top=mouseY+'px'
     sectionPage.style.left=mouseX+'px'
+    sectionPage.style.backgroundColor = currentColor
 
 
     const closeButton = document.createElement('button')
