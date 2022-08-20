@@ -1,13 +1,19 @@
 import '../static/sass/knowlege_page.scss'
-export default function RenderKnowlege(app,name,data){
+import jsonDataKwonledge from '../static/assets/data/knowlege.json'
+console.dir(jsonDataKwonledge)
+
+const formatJsonFile= async (json)=> await (await fetch(json)).json()
+
+export default async function RenderKnowlege(app,name,data){
     const {
         mousePointer,
         currentColor
     } = data
     // console.log(mousePointer)
     const {x:mouseX,y:mouseY} = mousePointer
-
     name = name.replace('#','')
+    // we save the original name string
+    const originalName = name
     name = name.replace('%20',' ')
     app.innerHTML=''
 
@@ -32,12 +38,17 @@ export default function RenderKnowlege(app,name,data){
         })
     
     }
-    
+    const contentDataFormated = await formatJsonFile(jsonDataKwonledge)
     sectionPage.appendChild(closeButton)
+    // Content
+    sectionPage.appendChild( createContent(contentDataFormated,originalName))
     app.appendChild(sectionPage)
 }
 
-function createContent(data){
+function createContent(data,name){
+    const currentContentData = data[name]
+    console.dir(currentContentData)
+    
     const content = document.createElement('div')
     return content
 }

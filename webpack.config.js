@@ -5,7 +5,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
     entry: {
-        index:'./src/index.js',
+        index: './src/index.js',
         // index2:'./src/index2.js',
         // router:'./src/pages/router.js'
     },
@@ -52,18 +52,22 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-              },
+            },
+            {
+                test: /knowlege\.json$/i,
+                type: 'asset/resource',
+            },
         ]
     },
     optimization: {
-        minimizer: [ new CssMinimizerPlugin(), ],
+        minimizer: [new CssMinimizerPlugin(),],
     },
     plugins: [
         // plugin que carga el html
-        new HtmlWebpackPlugin({ 
-            filename: 'index.html', 
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: './src/index.html',
-            chunks:['index']
+            chunks: ['index']
             // chunks:['index','router']
         }),
         // new HtmlWebpackPlugin({ 
