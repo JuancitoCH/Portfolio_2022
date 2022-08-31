@@ -47,7 +47,8 @@ export default async function RenderKnowlege(app,name,data){
 
 function createContent(data,name){
     const currentContentData = data[name]
-    console.dir(currentContentData)
+    console.log(name)
+    console.log(currentContentData)
     
     const content = document.createElement('div')
     return content

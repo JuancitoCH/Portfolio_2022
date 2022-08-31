@@ -1,0 +1,29 @@
+.iobserver{
+    animation: left_ob .5s ease-in forwards;
+}
+.io_not_observ{
+    animation: rigth_ob .5s ease-in forwards;
+}
+
+@keyframes left_ob {
+    0%{
+        position: relative;
+        left: -5rem;
+    }
+    100%{
+        position: relative;
+        left: 0rem;
+    }
+    
+}
+@keyframes rigth_ob {
+    0%{
+        position: relative;
+        left: 0rem;
+    }
+    100%{
+        position: relative;
+        left: -10rem;
+    }
+    
+}
