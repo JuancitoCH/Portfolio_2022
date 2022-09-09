@@ -1,18 +1,24 @@
 import './static/sass/index.scss'
 import './static/sass/menu.scss'
+import './static/sass/sun.scss'
 import './static/sass/card_sections.scss'
 import './static/sass/intersection_observer.scss'
 
-import iob from './js_components_anim/intersectionob'
+// animation
+import intersectionob from './js_components_anim/intersectionob'
+import sun_anim from './js_components_anim/sun_animation'
+
 import RenderKnowlege from './pages/RenderKnowlege'
+
 
 const app = document.querySelector('#app')
 
-// intersecction Observer
-iob()
+// Animation
+intersectionob()
 
 // Routing
 const knowlege_node_list = document.querySelectorAll('.knowlege_card')
+console.log(knowlege_node_list)
 let mousePointer
 let currentColor
 for (const known of knowlege_node_list) {

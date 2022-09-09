@@ -19,8 +19,11 @@ const observer = new IntersectionObserver((entries,observer)=>{
     threshold: .6
 })
 
-cards_knowledge.forEach(card=>{
-    if( card.className?.includes('knowlege_card'))
-        observer.observe(card)
-})
+export default function io_cards_anim(){
+
+    cards_knowledge.forEach(card=>{
+        if( card.className?.includes('knowlege_card'))
+            observer.observe(card)
+    })
+}
 

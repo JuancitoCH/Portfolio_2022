@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 $background_body:#292a30;
+// $background_body:#1D1D1D;
 $background_secundary : #2c2e35;
 $shadows_secundary:rgba(46, 46, 46,.6);
 $text_color_black:#280008;
 $text_color_white:rgb(224, 224, 224);
+
+$text_resalt_color_violet:#715AFF;
+$text_resalt_color_green:#A6E99B;
+
 *{
     margin: 0;
     padding: 0;
@@ -20,52 +25,57 @@ body{
     // overflow-y: scroll;
 }
 .header{
-    height: 60rem;
-    // scroll-snap-align: start;
-
+    height: 95vh;
     font-family: 'Noto Sans', sans-serif;
     color: $text_color_black;
-    background-color: $background_secundary ;
+    display: flex;
+    justify-content: center;
+    // background-color: $background_secundary ;
     margin: 1rem;
-    border-radius: .5rem;
-    box-shadow: 5px 5px 4px $shadows_secundary;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: .5px;
     .header_charge{
-        grid-column: 1;
-        // border: #780116 2px solid;
-    }
-    .header_i{
-        padding-right: 2rem;
+        margin-top: 15%;
+        color: $text_color_white;
         position: relative;
-        h2{
-            
-            right: 1rem;
+        left: -7rem;
+        // outline: #715AFF 2px solid;
+        width: fit-content;
+
+        font-size: 2.6rem;
+        h1,h2{
             width: fit-content;
-            // display: inline-block;
-            color: white;
         }
-        h2:hover{
-            -webkit-text-stroke: .5px rgb(53, 43, 100);
-            color: transparent;
+        h1 b{
+            color: $text_resalt_color_violet;
         }
-        section{
-            
-            div{
-                float: left;
-                margin-right:1rem;
-                a{
-                    text-decoration: none;
-                }
-            }
+        h2,h3{
+            // display: block;
+            text-align: right;
+            color: $text_resalt_color_green;
         }
+
     }
+}
+.info_about_red{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $text_resalt_color_violet;
+    color: $text_color_white;
+    z-index: 10;
+    right: 4rem;
+    bottom: 4rem;
+
+    height: 2.8rem;
+    width: 2.8rem;
+    
+    border-radius: 50%;
 }
 
 main{
     margin-top: 2rem;
-    background-color: $background_secundary;
+    background-color: $background_body;
     padding: 1rem;
 }
 

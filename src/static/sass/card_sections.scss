@@ -1,4 +1,5 @@
 $background_body:#292a30;
+
 $background_secundary : #2c2e35;
 $shadows_secundary:rgba(46, 46, 46,.6);
 $text_color_black:#280008;
@@ -9,9 +10,8 @@ $text_color_white:rgb(224, 224, 224);
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    // width: 50rem;
-    // height: 50rem;
     margin: 2rem;
+    margin-left: 4rem;
     .knowlege_card{
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         cursor: pointer;
