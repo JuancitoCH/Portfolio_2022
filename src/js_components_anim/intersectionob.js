@@ -16,7 +16,7 @@ const observer = new IntersectionObserver((entries,observer)=>{
 
 },{
     // rootMargin: '0px',
-    threshold: .6
+    threshold: .3
 })
 
 export default function io_cards_anim(){

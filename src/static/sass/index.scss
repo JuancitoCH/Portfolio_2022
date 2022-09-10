@@ -1,38 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-$background_body:#292a30;
+$background_body: #292a30;
 // $background_body:#1D1D1D;
 $background_secundary : #2c2e35;
-$shadows_secundary:rgba(46, 46, 46,.6);
-$text_color_black:#280008;
-$text_color_white:rgb(224, 224, 224);
+$shadows_secundary: rgba(46, 46, 46, .6);
+$text_color_black: #280008;
+$text_color_white: rgb(224, 224, 224);
 
-$text_resalt_color_violet:#715AFF;
-$text_resalt_color_green:#A6E99B;
+$text_resalt_color_violet: #715AFF;
+$text_resalt_color_green: #A6E99B;
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-html{
-    scroll-snap-type: y mandatory;
+
+html {
+    // scroll-snap-type: y mandatory;
+    // scroll-snap-type: y proximity;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: $background_body;
     margin-left: 3.5rem;
 
-    
+
     // overflow-y: scroll;
 }
-.header{
-    height: 95vh;
+
+.header {
+    // scroll-snap-align: start;
+    // scroll-padding: 10rem;
+    height: 90vh;
+    // margin-bottom: 5rem;
     font-family: 'Noto Sans', sans-serif;
     color: $text_color_black;
     display: flex;
     justify-content: center;
     // background-color: $background_secundary ;
     margin: 1rem;
-    .header_charge{
+
+    .header_charge {
         margin-top: 15%;
         color: $text_color_white;
         position: relative;
@@ -41,13 +51,21 @@ body{
         width: fit-content;
 
         font-size: 2.6rem;
-        h1,h2{
+
+        h1,
+        h2 {
             width: fit-content;
         }
-        h1 b{
+        h1{
+            display: flex;
+            gap: 36px;
+        }
+        h1 b span{
             color: $text_resalt_color_violet;
         }
-        h2,h3{
+
+        h2,
+        h3 {
             // display: block;
             text-align: right;
             color: $text_resalt_color_green;
@@ -55,7 +73,8 @@ body{
 
     }
 }
-.info_about_red{
+
+.info_about_red {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -69,13 +88,35 @@ body{
 
     height: 2.8rem;
     width: 2.8rem;
-    
+
     border-radius: 50%;
 }
 
-main{
+main {
     margin-top: 2rem;
     background-color: $background_body;
     padding: 1rem;
 }
 
+.header_charge b span {
+    position: relative;
+    display: block;
+    width: min-content;
+    animation: waviy 1.5s infinite;
+    animation-delay: calc(.3s * var(--i));
+    width: min-content;
+    float: left;
+}
+
+@keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-10px)
+    }
+}

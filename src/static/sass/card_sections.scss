@@ -6,6 +6,8 @@ $text_color_black:#280008;
 $text_color_white:rgb(224, 224, 224);
 .knowlege{
     // scroll-snap-align: center;
+    // scroll-padding: 10rem;
+
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -21,6 +23,7 @@ $text_color_white:rgb(224, 224, 224);
         text-align: center;
         background-color: $background_body;
         border-radius: 5px;
+        opacity: 0;
         h3{
             z-index: 10;
         }
@@ -35,26 +38,32 @@ $text_color_white:rgb(224, 224, 224);
                 height: 100%;    
             }
         }
-        section{
-            // background-color: $background_body;
-            background-color: inherit;
-            width: 100%;
-            position: absolute;
-            opacity: 0;
-            transition: opacity .3s ease-in, transform .5s ease-in;
-            text-align: center;
-            z-index: 2;
-            border-radius: 0 0 5px 5px;
-            transform: translateY(-1.5rem);
-            // animation: section_hide .3s forwards;
-        }
+        // section{
+        //     // background-color: $background_body;
+        //     background-color: inherit;
+        //     width: 100%;
+        //     position: absolute;
+        //     opacity: 0;
+        //     transition: opacity .3s ease-in, transform .5s ease-in;
+        //     text-align: center;
+        //     // z-index: 2;
+        //     border-radius: 0 0 5px 5px;
+        //     transform: translateY(-1.5rem);
+            
+        //     // animation: section_hide .3s forwards;
+        // }
+        // section ul {
+        //     list-style: none;
+        // }
 
     }
     .knowlege_card:hover{
-        section{
-            opacity: 1;
-            transform: translateY(2rem);
-        }
+        opacity: .6 !important;
+        // section{
+        //     opacity: 1;
+        //     transform: translateY(2rem);
+            
+        // }
     }
 }
 

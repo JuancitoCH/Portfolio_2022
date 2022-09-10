@@ -1,22 +1,36 @@
 .menu{
     z-index: 10000;
     position: fixed;
-    background-color: aqua;
+    background-color: rgb(202, 202, 202);
     height: 100%;
     top: 0%;
-    left: -3.9rem;
+    left: -6rem;
     transition: left .5s ease;
+    font-size: 1.4rem;
 }
+
+.menu ul{
+    list-style-type: none;
+}
+
 .menu::after{
-    content: '>>';
+    content: '<<';
+    padding-left: 3rem;
+    text-align: center;
     position: relative;
     display: block;
     right: -3.8rem;
     top: -3rem;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
+    color: white;
     opacity: .6;
     height: 100%;
+    transition: opacity .5s ease-in;
 }
 .menu:hover{
     left: 0%;
+    &::after{
+        opacity: 0;
+        // content: " ";
+    }
 }
