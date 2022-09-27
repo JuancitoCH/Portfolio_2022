@@ -46,10 +46,11 @@ var observer = new IntersectionObserver(function (entries, observer) {
     if (entry.isIntersecting) {
       entry.target.classList.remove('io_not_observ');
       entry.target.classList.add('iobserver');
-    } else {
-      entry.target.classList.remove('iobserver');
-      entry.target.classList.add('io_not_observ');
-    }
+    } // else {
+    //     entry.target.classList.remove('iobserver')
+    //     entry.target.classList.add('io_not_observ')
+    // }
+
   });
 }, {
   // rootMargin: '0px',
@@ -74,26 +75,23 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
-
-console.dir(knowlege_namespaceObject);
+ // console.dir(jsonDataKwonledge)
 
 var formatJsonFile = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(json) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(jsonData) {
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return fetch(json);
+            return fetch(jsonData, {
+              mode: 'no-cors'
+            });
 
           case 2:
-            _context.next = 4;
-            return _context.sent.json();
-
-          case 4:
             return _context.abrupt("return", _context.sent);
 
-          case 5:
+          case 3:
           case "end":
             return _context.stop();
         }
@@ -111,13 +109,13 @@ function RenderKnowlege(_x2, _x3, _x4) {
 }
 
 function _RenderKnowlege() {
-  _RenderKnowlege = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(app, name, data) {
+  _RenderKnowlege = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(app, name, data_graficposition) {
     var mousePointer, currentColor, mouseX, mouseY, originalName, sectionPage, closeButton, contentDataFormated;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            mousePointer = data.mousePointer, currentColor = data.currentColor; // console.log(mousePointer)
+            mousePointer = data_graficposition.mousePointer, currentColor = data_graficposition.currentColor; // console.log(mousePointer)
 
             mouseX = mousePointer.x, mouseY = mousePointer.y;
             name = name.replace('#', ''); // we save the original name string
@@ -213,7 +211,8 @@ try {
           var node = _step2.value;
 
           if (node.id = 'name_card') {
-            hash_url = this.childNodes[3].textContent;
+            // hash_url = this.childNodes[1].textContent
+            hash_url = this.querySelector('h3').textContent;
           } else {
             hash_url = '';
           }

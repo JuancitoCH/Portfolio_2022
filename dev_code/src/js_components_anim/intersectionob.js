@@ -7,10 +7,10 @@ const observer = new IntersectionObserver((entries,observer)=>{
             entry.target.classList.remove('io_not_observ')
             entry.target.classList.add('iobserver')
         }
-        else {
-            entry.target.classList.remove('iobserver')
-            entry.target.classList.add('io_not_observ')
-        }
+        // else {
+        //     entry.target.classList.remove('iobserver')
+        //     entry.target.classList.add('io_not_observ')
+        // }
         
     })
 

@@ -1,14 +1,16 @@
 import '../static/sass/knowlege_page.scss'
 import jsonDataKwonledge from '../static/assets/data/knowlege.json'
-console.dir(jsonDataKwonledge)
+// console.dir(jsonDataKwonledge)
 
-const formatJsonFile= async (json)=> await (await fetch(json)).json()
+const formatJsonFile= async (jsonData)=> await fetch(jsonData,{
+    mode:'no-cors'
+})
 
-export default async function RenderKnowlege(app,name,data){
+export default async function RenderKnowlege(app,name,data_graficposition){
     const {
         mousePointer,
         currentColor
-    } = data
+    } = data_graficposition
     // console.log(mousePointer)
     const {x:mouseX,y:mouseY} = mousePointer
     name = name.replace('#','')
@@ -38,6 +40,7 @@ export default async function RenderKnowlege(app,name,data){
         })
     
     }
+
     const contentDataFormated = await formatJsonFile(jsonDataKwonledge)
     sectionPage.appendChild(closeButton)
     // Content

@@ -26,7 +26,8 @@ for (const known of knowlege_node_list) {
         let hash_url
         for (let node of this.childNodes) {
             if (node.id = 'name_card') {
-                hash_url = this.childNodes[3].textContent
+                // hash_url = this.childNodes[1].textContent
+                hash_url = this.querySelector('h3').textContent
             } else {
                 hash_url = ''
             }
