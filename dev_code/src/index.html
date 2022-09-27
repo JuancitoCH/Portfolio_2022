@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio 2022</title>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 <body>
     <div class="sun">
@@ -77,9 +78,33 @@
     </header>
 
     <main>
-        <section class="proyects">
+        <section class="projects">
+            <article class="one_project">
+                <div class="description">
+                    <h3>Nombre del proyecto</h3>
+                    <p>Descripcion</p>
+                    <ul>
+                        <!-- tecnologias usadas -->
+                        <li>Js</li>
+                        <li>Js</li>
+                        <li>Js</li>
+                    </ul>
+                </div>
+                <div class="projects_imgs_carroucel" >
+                    <div class="carousel-cell">
+                        <img src="<%= require('./static/assets/projects/1.png')%>" alt="asdd">
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="<%= require('./static/assets/projects/2.png')%>" alt="asd">
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="<%= require('./static/assets/projects/3.png')%>" alt="ss">
+                    </div>
+                </div>
+            </article>
 
         </section>
+        <!-- ------------ -->
         <section class="knowlege">
             <article class="knowlege_card js">
                 <div></div>

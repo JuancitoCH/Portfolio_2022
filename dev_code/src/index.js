@@ -3,10 +3,13 @@ import './static/sass/menu.scss'
 import './static/sass/sun.scss'
 import './static/sass/card_sections.scss'
 import './static/sass/intersection_observer.scss'
-
 // animation
 import intersectionob from './js_components_anim/intersectionob'
 import sun_anim from './js_components_anim/sun_animation'
+
+import './js_components_anim/flickity_carrousel.js'
+import './static/sass/flickity.css'
+import './static/sass/projects_display.scss'
 
 import RenderKnowlege from './pages/RenderKnowlege'
 
@@ -45,7 +48,7 @@ window.onhashchange = (e) => {
         mousePointer,
         currentColor
     }
-    name != '#' && name != '#home' && RenderKnowlege(app, name, data)
+    name != '#' && name!='#_' && name != '#home' && RenderKnowlege(app, name, data)
 }
 window.onload = (e) => {
     window.location.hash = 'home'

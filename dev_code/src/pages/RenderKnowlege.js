@@ -36,7 +36,7 @@ export default async function RenderKnowlege(app,name,data_graficposition){
         parent.classList.add('close')
         parent.addEventListener('animationend',function(e){
             this.remove()
-            window.location.hash='home'
+            window.location.hash='_'
         })
     
     }
@@ -50,8 +50,8 @@ export default async function RenderKnowlege(app,name,data_graficposition){
 
 function createContent(data,name){
     const currentContentData = data[name]
-    console.log(name)
-    console.log(currentContentData)
+    // console.log(name)
+    // console.log(currentContentData)
     
     const content = document.createElement('div')
     return content
