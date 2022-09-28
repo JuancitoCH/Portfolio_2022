@@ -1,4 +1,7 @@
+
 $background_body: #292a30;
+$text_color_white: rgb(224, 224, 224);
+$text_resalt_color_green: #A6E99B;
 
 .projects {
   position: relative;
@@ -11,8 +14,11 @@ $background_body: #292a30;
 .one_project {
   opacity: 0;
   position: relative;
+  color: $text_color_white;
   background-color:$background_body;
   .description{
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px;
     content: ' ';
     display: block;
     width: 100%;
@@ -21,6 +27,22 @@ $background_body: #292a30;
     position: absolute;
     top: 0;
     z-index: 10;
+    h3{
+      font-size: x-large;
+      color: #b31839;
+    }
+    p{
+      font-size: medium;
+    }
+    ul{
+      padding-left: 1rem;
+      font-size: smaller;
+      color: $text_resalt_color_green;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      list-style: none;
+    }
     // p{
     // }
   }

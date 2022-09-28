@@ -1,6 +1,11 @@
 // const Flickity = require('flickity')
-var carousel = document.querySelector('.projects_imgs_carroucel');
-var flkty = new Flickity( carousel, {
+// const carousel = document.querySelector('.projects_imgs_carroucel');
+const carousels = document.querySelectorAll('.projects_imgs_carroucel');
+// console.log(carousels)
+
+carousels.forEach(carousel => {
+  console.log(carousel)
+  const flkty = new Flickity(carousel, {
     accessibility: true,
     prevNextButtons: true,
     pageDots: true,
@@ -13,18 +18,21 @@ var flkty = new Flickity( carousel, {
       y2: 45,
       x3: 15
     }
-});
-
-var imgs = carousel.querySelectorAll('.carousel-cell img');
-// get transform property
-var docStyle = document.documentElement.style;
-var transformProp = typeof docStyle.transform == 'string' ?
-  'transform' : 'WebkitTransform';
-
-flkty.on( 'scroll', function() {
-  flkty.slides.forEach( function( slide, i ) {
-    var img = imgs[i];
-    var x = ( slide.target + flkty.x ) * -1/3;
-    img.style[ transformProp ] = 'translateX(' + x  + 'px)';
   });
-});
+
+  const imgs = carousel.querySelectorAll('.carousel-cell img');
+  console.log(imgs)
+  // get transform property
+  const docStyle = document.documentElement.style;
+  const transformProp = typeof docStyle.transform == 'string' ?
+    'transform' : 'WebkitTransform';
+
+  flkty.on('scroll', function () {
+    flkty.slides.forEach(function (slide, i) {
+      const img = imgs[i];
+      const x = (slide.target + flkty.x) * -1 / 3;
+      img.style[transformProp] = 'translateX(' + x + 'px)';
+    });
+  });
+
+})

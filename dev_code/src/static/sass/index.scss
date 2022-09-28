@@ -21,12 +21,13 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+body{
 
-body {
     background-color: $background_body;
+}
+
+.body {
     margin-left: 3.5rem;
-
-
     // overflow-y: scroll;
 }
 
@@ -75,6 +76,32 @@ body {
 }
 
 .info_about_red {
+    font-family: 'Noto Sans', sans-serif;
+
+    &::before{
+        content: " ";
+        position: absolute;
+        background-color: white;
+        color: $text_color_black;
+        padding: .5rem 1rem;
+        opacity: 0;
+        top: -.7rem;
+        width: 0;
+        height: 0;
+        transition: opacity .5s ease,
+        transform .4s ease,
+        width .2s ease,
+        height .2s ease
+        // content .8s ease,
+        ;
+        // left: -4.5rem;
+        transform: translateY(1rem);
+        border-radius: 10px 10px 0px 10px;
+        z-index: 9;
+
+
+    }
+
     position: fixed;
     display: flex;
     justify-content: center;
@@ -90,6 +117,23 @@ body {
     width: 2.8rem;
 
     border-radius: 50%;
+    opacity: .7;
+    transition: opacity .5s ease-in ;
+
+    &:hover{
+        opacity: 1;
+        &::before{
+            content: "About";
+            width: 100%;
+            height: 50%;
+            opacity: .7;
+            // left: -4.5rem;
+            transform: translateX(-3.5rem);
+            // transform: translateY(0);
+
+            
+        }
+    }
 }
 
 main {

@@ -3,9 +3,10 @@ import './static/sass/menu.scss'
 import './static/sass/sun.scss'
 import './static/sass/card_sections.scss'
 import './static/sass/intersection_observer.scss'
+import './static/sass/footer.scss'
 // animation
 import intersectionob from './js_components_anim/intersectionob'
-import sun_anim from './js_components_anim/sun_animation'
+// import sun_anim from './js_components_anim/sun_animation'
 
 import './js_components_anim/flickity_carrousel.js'
 import './static/sass/flickity.css'
@@ -14,7 +15,7 @@ import './static/sass/projects_display.scss'
 import RenderKnowlege from './pages/RenderKnowlege'
 
 
-const app = document.querySelector('#app')
+// const app = document.querySelector('#app')
 
 // Animation
 intersectionob()
