@@ -262,8 +262,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
- // const app = document.querySelector('#app')
-// Animation
+
+var app = document.querySelector('#app'); // Animation
 
 io_cards_anim(); // Routing
 

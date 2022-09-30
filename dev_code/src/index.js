@@ -15,7 +15,7 @@ import './static/sass/projects_display.scss'
 import RenderKnowlege from './pages/RenderKnowlege'
 
 
-// const app = document.querySelector('#app')
+const app = document.querySelector('#app')
 
 // Animation
 intersectionob()
