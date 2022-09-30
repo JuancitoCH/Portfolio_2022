@@ -16,10 +16,11 @@ $text_color_white:rgb(224, 224, 224);
     margin-left: 4rem;
     .knowlege_card{
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: .9rem;
         cursor: pointer;
         position: relative;
-        width: 15rem;
-        height: 10rem;
+        width: 12rem;
+        height: 8rem;
         text-align: center;
         background-color: $background_body;
         border-radius: 5px;
@@ -29,11 +30,12 @@ $text_color_white:rgb(224, 224, 224);
         }
         div{
             // width: 4rem;
-            height: 5rem;
+            height: 4rem;
             overflow: hidden;
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
+            margin-top: .5rem;
             img{
                 height: 100%;    
             }
@@ -70,55 +72,79 @@ $text_color_white:rgb(224, 224, 224);
 .js{
     background-color: #F2DA40 !important;
     div{
-        background-image: url("../assets/logos/js.svg");
+        background-image: url("../assets/icons/js.svg");
         
     }
 }
 .react{
     background-color: #51469E !important;
     div{
-        background-image: url("../assets/logos/react.svg");
+        background-image: url("../assets/icons/react.svg");
     }
 }
 .node{
     background-color: #AEC64D !important;
     div{
-        background-image: url("../assets/logos/nodejs.svg");
+        background-image: url("../assets/icons/nodejs.svg");
     }
 }
 .mysql{
     background-color: #EB8647 !important;
     div{
-        background-image: url("../assets/logos/mysql.svg");
+        background-image: url("../assets/icons/mysql.svg");
     }
 }
 .mongo{
     background-color: #67AB33 !important;
     div{
-        background-image: url("../assets/logos/react.svg");
+        background-image: url("../assets/icons/react.svg");
     }
 }
 .docker{
     background-color: #6DC2C5 !important;
     div{
-        background-image: url("../assets/logos/docker.svg");
+        background-image: url("../assets/icons/docker.svg");
     }
 }
 .googlecloud{
     background-color: #E63946 !important;
     div{
-        background-image: url("../assets/logos/google_cloud_v2.svg");
+        background-image: url("../assets/icons/google_cloud_v2.svg");
     }
 }
 .python{
     background-color: #425EB3 !important;
     div{
-        background-image: url("../assets/logos/python.svg");
+        background-image: url("../assets/icons/python.svg");
     }
 }
 .rust{
     background-color: #ED9158 !important;
     div{
-        background-image: url("../assets/logos/rust.png");
+        background-image: url("../assets/icons/rust.png");
+    }
+}
+.git{
+    background-color: #da4b4b !important;
+    div{
+        background-image: url("../assets/icons/git.svg");
+    }
+}
+.github{
+    background-color: #3f28a8 !important;
+    div{
+        background-image: url("../assets/icons/github.svg");
+    }
+}
+.sqlite{
+    background-color: #2e5fa8 !important;
+    div{
+        background-image: url("../assets/icons/sqlite.svg");
+    }
+}
+.aws{
+    background-color: #d4933d !important;
+    div{
+        background-image: url("../assets/icons/aws.svg");
     }
 }

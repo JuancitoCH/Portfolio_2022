@@ -1,70 +1,7 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
-
-/***/ 346:
-/***/ (() => {
-
-// const Flickity = require('flickity')
-// const carousel = document.querySelector('.projects_imgs_carroucel');
-var carousels = document.querySelectorAll('.projects_imgs_carroucel'); // console.log(carousels)
-
-carousels.forEach(function (carousel) {
-  console.log(carousel);
-  var flkty = new Flickity(carousel, {
-    accessibility: true,
-    prevNextButtons: true,
-    pageDots: true,
-    // wrapAround:true,
-    arrowShape: {
-      x0: 10,
-      x1: 60,
-      y1: 50,
-      x2: 60,
-      y2: 45,
-      x3: 15
-    }
-  });
-  var imgs = carousel.querySelectorAll('.carousel-cell img');
-  console.log(imgs); // get transform property
-
-  var docStyle = document.documentElement.style;
-  var transformProp = typeof docStyle.transform == 'string' ? 'transform' : 'WebkitTransform';
-  flkty.on('scroll', function () {
-    flkty.slides.forEach(function (slide, i) {
-      var img = imgs[i];
-      var x = (slide.target + flkty.x) * -1 / 3;
-      img.style[transformProp] = 'translateX(' + x + 'px)';
-    });
-  });
-});
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/global */
@@ -101,13 +38,10 @@ carousels.forEach(function (carousel) {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
 
 ;// CONCATENATED MODULE: ./src/js_components_anim/intersectionob.js
 var cards_knowledge = document.querySelector('.knowlege').childNodes;
-var cards_projects = document.querySelector('.projects').childNodes;
+var cards_projects = document.querySelector('.projects_v2').childNodes;
 var observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
@@ -132,11 +66,9 @@ function io_cards_anim() {
   cards_projects.forEach(function (card) {
     var _card$className2;
 
-    if ((_card$className2 = card.className) !== null && _card$className2 !== void 0 && _card$className2.includes('one_project')) observer.observe(card);
+    if ((_card$className2 = card.className) !== null && _card$className2 !== void 0 && _card$className2.includes('one_project_v2')) observer.observe(card);
   });
 }
-// EXTERNAL MODULE: ./src/js_components_anim/flickity_carrousel.js
-var flickity_carrousel = __webpack_require__(346);
 ;// CONCATENATED MODULE: ./src/static/assets/data/knowlege.json
 const knowlege_namespaceObject = __webpack_require__.p + "373bfb9df70135ef16b4.json";
 ;// CONCATENATED MODULE: ./src/pages/RenderKnowlege.js
@@ -261,14 +193,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
-
-
 var app = document.querySelector('#app'); // Animation
 
 io_cards_anim(); // Routing
 
 var knowlege_node_list = document.querySelectorAll('.knowlege_card');
-console.log(knowlege_node_list);
 var mousePointer;
 var currentColor;
 
@@ -320,12 +249,8 @@ window.onhashchange = function (e) {
     currentColor: currentColor
   };
   name != '#' && name != '#_' && name != '#home' && RenderKnowlege(app, name, data);
-};
-
-window.onload = function (e) {
-  window.location.hash = 'home';
-};
-})();
-
+}; // window.onload = (e) => {
+//     // window.location.hash = ''
+// }
 /******/ })()
 ;

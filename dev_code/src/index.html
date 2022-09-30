@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio 2022</title>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </head>
-<body>
+<body id="#init">
     <main class="body">
         <div class="sun">
             <div class="circle"></div>
@@ -81,59 +81,24 @@
         </header>
     
         <main>
-            <section class="projects">
-                <article class="one_project">
+            <section class="projects_v2">
+                <article class="one_project_v2">
                     <div class="description">
-                        <h3>Nombre del proyecto</h3>
-                        <p>Descripcion</p>
+                        <h3>Class Manager Api</h3>
+                        <p>Bakend API for class manager app</p>
                         <ul>
                             <!-- tecnologias usadas -->
-                            <li>Js</li>
-                            <li>Js</li>
-                            <li>Js</li>
-                        </ul>
-                    </div>
-                    <div class="projects_imgs_carroucel" >
-                        <div class="carousel-cell">
-                            <img src="<%= require('./static/assets/projects/1.png')%>" alt="asdd">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="<%= require('./static/assets/projects/2.png')%>" alt="asd">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="<%= require('./static/assets/projects/3.png')%>" alt="ss">
-                        </div>
-                    </div>
-                </article>
-    
-                <article class="one_project">
-                    <div class="description">
-                        <h3>Portfolio 2022</h3>
-                        <p>This Project has been developed with webpack</p>
-                        <ul>
-                            <!-- tecnologias usadas -->
-                            <li>Nodejs</li>
                             <li>Javascript</li>
-                            <li>Html</li>
-                            <li>css</li>
-                            <li>sass</li>
-                            <li>git</li>
+                            <li>Nodejs</li>
+                            <li>Express</li>
+                            <li>Prisma</li>
+                            <li>Mysql</li>
                         </ul>
                     </div>
-                    <div class="projects_imgs_carroucel" >
-                        <div class="carousel-cell">
-                            <img src="<%= require('./static/assets/projects/1.png')%>" alt="asdd">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="<%= require('./static/assets/projects/2.png')%>" alt="asd">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="<%= require('./static/assets/projects/3.png')%>" alt="ss">
-                        </div>
-                    </div>
+                    <img src="<%= require('./static/assets/projects/miro.png')%>" alt="">
                 </article>
-    
             </section>
+            
             <!-- ------------ -->
             <section id="knowledge" class="knowlege">
                 <article class="knowlege_card js">
