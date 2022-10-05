@@ -132,6 +132,9 @@ $text_resalt_color_green: #A6E99B;
     flex-direction: row;
 
     gap: 1rem;
+    img{
+      border-radius: 1px 10px 10px 1px;
+    }
     .description {
       text-align: start;
       h3{

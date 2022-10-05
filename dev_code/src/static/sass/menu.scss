@@ -1,26 +1,45 @@
 .menu{
     z-index: 10000;
     position: fixed;
-    background-color: rgb(202, 202, 202);
+    background-color: #232429;
     height: 100%;
     top: 0%;
-    left: -6rem;
+    left: -7.2rem;
+    padding-top: 6rem;
     transition: left .5s ease;
     font-size: 1.4rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu ul{
     list-style-type: none;
+    li{
+        padding-bottom: 1rem;
+    }
+    a{
+        color: #e09fec;
+        text-decoration: none;
+        display: block;
+        padding-left: .2rem;
+        padding-right: .2rem;
+        transition: color .15s ease-in;
+        &:hover{
+            color: #a04db1;
+            cursor: pointer;
+        }
+    }
 }
 
 .menu::after{
     content: '<<';
-    padding-left: 3rem;
-    text-align: center;
     position: relative;
+    padding-left: 0rem;
+    width: 50%;
+    text-align: center;
     display: block;
-    right: -3.8rem;
-    top: -3rem;
+    right: -6.9rem;
+    top: -12rem;
     // background-color: antiquewhite;
     color: white;
     opacity: .6;
