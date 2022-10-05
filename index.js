@@ -31,8 +31,7 @@ function temporalCopiedElement(positionx, positiony) {
 }
 
 bs.forEach(function (b) {
-  console.log(b);
-
+  // console.log(b)
   b.onclick = function (e) {
     copyclipboard(e, this);
   };
@@ -108,6 +107,7 @@ var __webpack_exports__ = {};
 ;// CONCATENATED MODULE: ./src/js_components_anim/intersectionob.js
 var cards_knowledge = document.querySelector('.knowlege').childNodes;
 var cards_projects = document.querySelector('.projects_v2').childNodes;
+var about_section = document.querySelector('#about');
 var observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
@@ -134,6 +134,7 @@ function io_cards_anim() {
 
     if ((_card$className2 = card.className) !== null && _card$className2 !== void 0 && _card$className2.includes('one_project_v2')) observer.observe(card);
   });
+  observer.observe(about_section);
 }
 ;// CONCATENATED MODULE: ./src/static/assets/data/knowlege.json
 const knowlege_namespaceObject = __webpack_require__.p + "373bfb9df70135ef16b4.json";
@@ -319,7 +320,7 @@ window.onhashchange = function (e) {
     mousePointer: mousePointer,
     currentColor: currentColor
   };
-  name != '#' && name != '#_' && name != '#home' && name != '#about' && RenderKnowlege(app, name, data);
+  name != '#' && name != '#_' && name != '#home' && name != '#about' && name != '#projects' && name != '#knowledge' && RenderKnowlege(app, name, data);
 }; // window.onload = (e) => {
 //     // window.location.hash = ''
 // }

@@ -12,16 +12,23 @@ $text_resalt_color_green: #A6E99B;
 .about{
     font-family: 'Noto Sans', sans-serif;
     color: $text_color_white;
-    margin-top: 15rem;
+    margin-top: 10rem;
     margin-bottom: 2rem;
+    position: relative;
+    opacity: 0;
     // background-color: aliceblue;
     box-shadow: 5px 5px 5px #292a30;
     h2{
+        // color: #db83ec;
+        position: relative;
+        left: .8rem;
+        color: $text_resalt_color_violet;
         font-size: 2.5rem;
     }
     h3{
+        position: relative;
+        left: 2rem;
         font-size: 2rem;
-        color: $text_resalt_color_violet;
     }
     li{
         b{
@@ -41,6 +48,96 @@ $text_resalt_color_green: #A6E99B;
     right: -4rem;
     border-radius: 0px 5px 5px 5px;
 
+}
+
+.resume_apart{
+    box-shadow: -2px 5px 5px 0px rgba(20, 20, 20, 0.2);
+    padding: .2rem;
+    margin-bottom: 2rem;
+}
+
+.resume01{
+    // background-color: rgb(243, 119, 119);
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    margin-top: 2rem;
+    .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        padding-right: 2rem;
+    }
+
+}
+.resume02{
+    // background-color: rgb(119, 243, 150);
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    margin-bottom: 2rem;
+    position: relative;
+    top: -2rem;
+    
+    .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+}
+
+.img_ofme01,
+.img_ofme02
+{
+    background-color: #db83ec;
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+}
+
+
+.contact_me{
+    text-align: center;
+    color: $text_color_white;
+    h4{
+        font-size: 1.4rem;
+        color: $text_resalt_color_violet;
+    }
+    ul{
+        list-style:none ;
+        font-size: 1.1rem;
+    }
+    b{
+        font-weight: 500;
+        color: $text_resalt_color_green;
+        transition: color .15s ease-in;
+        &:hover{
+            color: #3a852f;
+            cursor: pointer;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: #db83ec;
+        transition: color .15s ease-in;
+        &:hover{
+            color: #a04db1;
+            cursor: pointer;
+        }
+    }
 }
 
 @keyframes copied{

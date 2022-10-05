@@ -1,6 +1,7 @@
 
 const cards_knowledge = document.querySelector('.knowlege').childNodes
 const cards_projects = document.querySelector('.projects_v2').childNodes
+const about_section = document.querySelector('#about')
 const observer = new IntersectionObserver((entries,observer)=>{
     entries.forEach(entry => {
         
@@ -30,5 +31,6 @@ export default function io_cards_anim(){
         if( card.className?.includes('one_project_v2'))
             observer.observe(card)
     })
+    observer.observe(about_section)
 }
 

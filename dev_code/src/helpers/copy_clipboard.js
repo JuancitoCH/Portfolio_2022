@@ -24,6 +24,6 @@ function temporalCopiedElement(positionx,positiony){
 }
 
 bs.forEach(b=>{
-    console.log(b)
+    // console.log(b)
     b.onclick = function (e){ copyclipboard(e,this) }
 })
