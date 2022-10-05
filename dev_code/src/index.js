@@ -50,7 +50,8 @@ window.onhashchange = (e) => {
         mousePointer,
         currentColor
     }
-    name != '#' && name!='#_' && name != '#home' && RenderKnowlege(app, name, data)
+    name != '#' && name!='#_' && name != '#home' && name!='#about'
+    && RenderKnowlege(app, name, data)
 }
 // window.onload = (e) => {
 //     // window.location.hash = ''
