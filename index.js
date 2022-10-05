@@ -1,7 +1,70 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 210:
+/***/ (() => {
+
+var contact_me = document.querySelector('.contact_me');
+var ul = contact_me.querySelector('ul');
+var bs = ul.querySelectorAll('b');
+
+var copyclipboard = function copyclipboard(e, b) {
+  console.log(e);
+  var screenX = e.offsetX,
+      screenY = e.offsetY;
+  console.log(e);
+  navigator.clipboard.writeText(b.textContent);
+  b.appendChild(temporalCopiedElement(screenX, screenY));
+};
+
+function temporalCopiedElement(positionx, positiony) {
+  var div = document.createElement('div');
+  div.textContent = 'Copied';
+  div.classList.add('clipboard_copied'); // div.style.top = positiony+'px'
+  // div.style.left = positionx+'px'
+
+  div.onanimationend = function () {
+    this.remove();
+  };
+
+  return div;
+}
+
+bs.forEach(function (b) {
+  console.log(b);
+
+  b.onclick = function (e) {
+    copyclipboard(e, this);
+  };
+});
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/global */
@@ -38,6 +101,9 @@
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
 
 ;// CONCATENATED MODULE: ./src/js_components_anim/intersectionob.js
 var cards_knowledge = document.querySelector('.knowlege').childNodes;
@@ -175,6 +241,8 @@ function createContent(data, name) {
   var content = document.createElement('div');
   return content;
 }
+// EXTERNAL MODULE: ./src/helpers/copy_clipboard.js
+var copy_clipboard = __webpack_require__(210);
 ;// CONCATENATED MODULE: ./src/index.js
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
@@ -187,12 +255,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
+
+
  // animation
 
- // import sun_anim from './js_components_anim/sun_animation'
+
+ // helper functions
 
 
-
+alert("This Project is in development");
 var app = document.querySelector('#app'); // Animation
 
 io_cards_anim(); // Routing
@@ -252,5 +323,7 @@ window.onhashchange = function (e) {
 }; // window.onload = (e) => {
 //     // window.location.hash = ''
 // }
+})();
+
 /******/ })()
 ;

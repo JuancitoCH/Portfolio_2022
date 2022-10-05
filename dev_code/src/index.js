@@ -4,13 +4,17 @@ import './static/sass/sun.scss'
 import './static/sass/card_sections.scss'
 import './static/sass/intersection_observer.scss'
 import './static/sass/footer.scss'
+import './static/sass/about.scss'
+import './static/sass/projects_display.scss'
 // animation
 import intersectionob from './js_components_anim/intersectionob'
-// import sun_anim from './js_components_anim/sun_animation'
-
-import './static/sass/projects_display.scss'
-
 import RenderKnowlege from './pages/RenderKnowlege'
+
+// helper functions
+import './helpers/copy_clipboard.js'
+
+
+alert("This Project is in development")
 
 
 const app = document.querySelector('#app')

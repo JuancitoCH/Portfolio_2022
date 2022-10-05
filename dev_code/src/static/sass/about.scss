@@ -1,0 +1,55 @@
+
+$background_body: #292a30;
+// $background_body:#1D1D1D;
+$background_secundary : #2c2e35;
+$shadows_secundary: rgba(46, 46, 46, .6);
+$text_color_black: #280008;
+$text_color_white: rgb(224, 224, 224);
+
+$text_resalt_color_violet: #715AFF;
+$text_resalt_color_green: #A6E99B;
+
+.about{
+    font-family: 'Noto Sans', sans-serif;
+    color: $text_color_white;
+    margin-top: 15rem;
+    margin-bottom: 2rem;
+    // background-color: aliceblue;
+    box-shadow: 5px 5px 5px #292a30;
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+        color: $text_resalt_color_violet;
+    }
+    li{
+        b{
+            position: relative;
+            overflow: visible;
+        }
+    }
+}
+.clipboard_copied{
+    color: #292a30;
+    background-color: white;
+    position: absolute;
+    animation: copied .8s ease-in forwards;
+    z-index: 20;
+    padding: .5rem;
+    text-align: center;
+    right: -4rem;
+    border-radius: 0px 5px 5px 5px;
+
+}
+
+@keyframes copied{
+    0%{
+        bottom: -1.6rem;
+        opacity: 0;
+    }
+    100%{
+        bottom: -1.9rem;
+        opacity: 1;
+    }
+}
