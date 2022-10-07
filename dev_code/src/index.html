@@ -79,7 +79,7 @@
             <!-- </section> -->
     
         </header>
-    
+        
         <main>
             <section id="projects" class="projects_v2">
                 <article class="one_project_v2">
@@ -95,7 +95,22 @@
                             <li>Mysql</li>
                         </ul>
                     </div>
-                    <img src="<%= require('./static/assets/projects/miro.png')%>" alt="">
+                    <section class="splide">
+                        <div class="splide__track">
+                              <ul class="splide__list">
+                                  <li class="splide__slide">
+                                    <img src="<%= require('./static/assets/projects/miro.png')%>" alt="">
+                                </li>
+                                  <li class="splide__slide">
+                                    <img src="<%= require('./static/assets/projects/miro.png')%>" alt="">
+                                </li>
+                                  <li class="splide__slide">
+                                    <img src="<%= require('./static/assets/projects/miro.png')%>" alt="">
+                                </li>
+                              </ul>
+                        </div>
+                      </section>
+
                 </article>
             </section>
             
@@ -310,7 +325,9 @@
 
         <div id="app"></div>
     </main>
+
     
+
     <footer>
         <p>August 2022</p>
     </footer>
