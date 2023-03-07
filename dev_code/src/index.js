@@ -15,7 +15,7 @@ import './js_components_anim/splide_mount'
 import './helpers/copy_clipboard.js'
 
 
-alert("This Project is in development")
+// alert("This Project is in development")
 
 
 const app = document.querySelector('#app')

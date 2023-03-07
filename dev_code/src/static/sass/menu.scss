@@ -1,4 +1,4 @@
-.menu{
+.menu {
     z-index: 10000;
     position: fixed;
     background-color: #232429;
@@ -12,44 +12,92 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.menu ul{
+.menu ul {
     list-style-type: none;
-    li{
+
+    li {
         padding-bottom: 1rem;
     }
-    a{
-        color: #e09fec;
-        text-decoration: none;
-        display: block;
-        padding-left: .2rem;
-        padding-right: .2rem;
-        transition: color .15s ease-in;
-        &:hover{
+
+    a {
+    //     color: #e09fec;
+    //     text-decoration: none;
+    //     display: block;
+    //     padding-left: .2rem;
+    //     padding-right: .2rem;
+    //     transition: color .15s ease-in;
+
+        &:hover {
             color: #a04db1;
             cursor: pointer;
         }
     }
 }
 
-.menu::after{
-    content: '<<';
-    position: relative;
-    padding-left: 0rem;
-    width: 50%;
-    text-align: center;
-    display: block;
-    right: -6.9rem;
-    top: -12rem;
-    // background-color: antiquewhite;
-    color: white;
-    opacity: .6;
-    height: 100%;
-    transition: opacity .5s ease-in;
-}
-.menu:hover{
-    left: 0%;
-    &::after{
-        opacity: 0;
-        // content: " ";
+// .menu::after{
+//     content: '<<';
+//     position: relative;
+//     padding-left: 0rem;
+//     width: 50%;
+//     text-align: center;
+//     display: block;
+//     right: -6.9rem;
+//     top: -12rem;
+//     // background-color: antiquewhite;
+//     color: white;
+//     opacity: .6;
+//     height: 100%;
+//     transition: opacity .5s ease-in;
+// }
+// .menu:hover{
+//     left: 0%;
+//     &::after{
+//         opacity: 0;
+//         // content: " ";
+//     }
+// }
+
+
+
+// new code 
+
+.menu {
+    border-radius: 10px;
+    padding: 0%;
+    height: 10%;
+    // width: 50%;
+    width: min-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    // center div horizontal
+    left: 50%;
+    transform: translateX(-50%);
+
+    top: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        display: flex;
+        flex-shrink: initial;
+        justify-content: center;
+        align-items: center;
+        li {
+                padding: 0;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            a {
+                color: transparent;
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                overflow: hidden;
+                border-radius: 50%;
+                background-color: #a04db1;
+                // background-image: url();
+                
+            }
+        }
     }
 }
