@@ -9,7 +9,7 @@ import './static/sass/projects_display.scss'
 
 // animation
 import intersectionob from './js_components_anim/intersectionob'
-import RenderKnowlege from './pages/RenderKnowlege'
+// import RenderKnowlege from './pages/RenderKnowlege'
 import './js_components_anim/splide_mount'
 // helper functions
 import './helpers/copy_clipboard.js'
@@ -24,37 +24,37 @@ const app = document.querySelector('#app')
 intersectionob()
 
 // Routing
-const knowlege_node_list = document.querySelectorAll('.knowlege_card')
-let mousePointer
-let currentColor
-for (const known of knowlege_node_list) {
-    known.addEventListener('click', function (e) {
-        let hash_url
-        for (let node of this.childNodes) {
-            if (node.id = 'name_card') {
-                // hash_url = this.childNodes[1].textContent
-                hash_url = this.querySelector('h3').textContent
-            } else {
-                hash_url = ''
-            }
-        }
-        window.location.hash = hash_url
-        currentColor = window.getComputedStyle(this, null).getPropertyValue('background-color')
+// const knowlege_node_list = document.querySelectorAll('.knowlege_card')
+// let mousePointer
+// let currentColor
+// for (const known of knowlege_node_list) {
+//     known.addEventListener('click', function (e) {
+//         let hash_url
+//         for (let node of this.childNodes) {
+//             if (node.id = 'name_card') {
+//                 // hash_url = this.childNodes[1].textContent
+//                 hash_url = this.querySelector('h3').textContent
+//             } else {
+//                 hash_url = ''
+//             }
+//         }
+//         window.location.hash = hash_url
+//         currentColor = window.getComputedStyle(this, null).getPropertyValue('background-color')
 
-        mousePointer = e
-    })
-}
+//         mousePointer = e
+//     })
+// }
 window.onhashchange = (e) => {
     e.preventDefault()
     const name = window.location.hash
-    const data = {
-        mousePointer,
-        currentColor
-    }
+    // const data = {
+    //     mousePointer,
+    //     currentColor
+    // }
     name != '#' && name!='#_' && 
     name != '#home' && name!='#about'
     && name!='#projects' && name!='#knowledge'
-        && RenderKnowlege(app, name, data)
+        // && RenderKnowlege(app, name, data)
 }
 // window.onload = (e) => {
 //     // window.location.hash = ''

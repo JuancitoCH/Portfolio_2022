@@ -2,6 +2,10 @@
 
     animation: left_ob .5s ease-in forwards;
 }
+.iobserver_right{
+
+    animation: rightApp_ob .5s ease-in forwards;
+}
 .io_not_observ{
     animation: rigth_ob .5s ease-in forwards;
 }
@@ -14,6 +18,18 @@
     100%{
         // position: relative;
         left: 0rem;
+        opacity: 1;
+    }
+    
+}
+@keyframes rightApp_ob {
+    0%{
+        // position: relative;
+        right: -3rem;
+    }
+    100%{
+        // position: relative;
+        right: 0rem;
         opacity: 1;
     }
     
