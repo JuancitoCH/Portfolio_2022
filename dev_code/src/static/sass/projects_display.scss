@@ -1,6 +1,7 @@
 $background_body: #292a30;
 $text_color_white: rgb(224, 224, 224);
 $text_resalt_color_green: #A6E99B;
+$text_resalt_color_violet: #715AFF;
 
 // .projects {
 //   position: relative;
@@ -113,6 +114,8 @@ $text_resalt_color_green: #A6E99B;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  gap: 1rem;
 
   .one_project_v2 {
     opacity: 0;
@@ -124,43 +127,48 @@ $text_resalt_color_green: #A6E99B;
 
     // backdrop-filter: blur(10px);
     // backdrop-filter:opacity(20%);
-
-    width: 100%;
-
+    width: 25rem;
     border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
 
-    gap: 1rem;
-    .splide{
-        border-radius: 10px !important;
-        overflow: hidden;
-        width: 85%;
-        height: 30rem;
+    .project_link_anchor{
+      position: absolute;
+      right: 1rem;
+      z-index: 1;
+      button{
+        background-color: $text_resalt_color_violet;
+      }
     }
-    img{
-      // border-radius: 1px 10px 10px 1px;
-      border-radius: 10px;
+    .project_img{
+      
+      height: 20rem;
       width: 100%;
+      overflow: hidden;
+      position: relative;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover
+      }
     }
     .description {
       height: 100%;
       width: 50%;
       text-align: start;
+      padding-bottom: 1rem;
+      font-size: medium;
       h3{
-        font-size: 2rem;
+        font-size: larger;
       }
       ul {
-        padding-left: 1rem;
+        color: $text_resalt_color_violet;
         font-size: smaller;
-        color: $text_color_white;
+        // color: $text_color_white;
         display: flex;
         flex-direction: row;
         gap: 5px;
         list-style: none;
-        
+        position: absolute;
+        right: 1rem;
       }
     }
   }

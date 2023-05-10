@@ -10,7 +10,7 @@ import './static/sass/projects_display.scss'
 // animation
 import intersectionob from './js_components_anim/intersectionob'
 // import RenderKnowlege from './pages/RenderKnowlege'
-import './js_components_anim/splide_mount'
+
 // helper functions
 import './helpers/copy_clipboard.js'
 
