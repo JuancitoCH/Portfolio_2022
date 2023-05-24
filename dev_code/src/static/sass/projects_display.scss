@@ -115,6 +115,7 @@ $text_resalt_color_violet: #715AFF;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
 
   .one_project_v2 {
@@ -124,6 +125,8 @@ $text_resalt_color_violet: #715AFF;
     box-shadow: 0px 5px 0px rgba(12, 12, 12, 0.1);
     color: $text_color_white;
     padding: 1rem;
+    overflow: hidden;
+
 
     // backdrop-filter: blur(10px);
     // backdrop-filter:opacity(20%);
@@ -144,6 +147,7 @@ $text_resalt_color_violet: #715AFF;
       width: 100%;
       overflow: hidden;
       position: relative;
+
       img{
         height: 100%;
         width: 100%;
@@ -152,7 +156,7 @@ $text_resalt_color_violet: #715AFF;
     }
     .description {
       height: 100%;
-      width: 50%;
+      // width: 50%;
       text-align: start;
       padding-bottom: 1rem;
       font-size: medium;

@@ -144,6 +144,7 @@ $text_resalt_color_violet: #715AFF;
     div {
         -webkit-mask: url("../assets/icons/nodejs.svg");
         mask: url("../assets/icons/nodejs.svg");
+        background-color: inherit;
     }
 }
 
@@ -160,8 +161,8 @@ $text_resalt_color_violet: #715AFF;
     // background-color: #67AB33 !important;
 
     div {
-        -webkit-mask: url("../assets/icons/react.svg");
-        mask: url("../assets/icons/react.svg");
+        -webkit-mask: url("../assets/icons/mongodb.svg");
+        mask: url("../assets/icons/mongodb.svg");
     }
 }
 
@@ -189,6 +190,14 @@ $text_resalt_color_violet: #715AFF;
     div {
         -webkit-mask: url("../assets/icons/python.svg");
         mask: url("../assets/icons/python.svg");
+    }
+}
+.typescript {
+    // background-color: #425EB3 !important;
+
+    div {
+        -webkit-mask: url("../assets/icons/typescript.svg");
+        mask: url("../assets/icons/typescript.svg");
     }
 }
 
