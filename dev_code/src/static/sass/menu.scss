@@ -84,9 +84,9 @@
         justify-content: center;
         align-items: center;
         li {
-                padding: 0;
-                padding-left: 1rem;
-                padding-right: 1rem;
+            padding: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
             a {
                 color: transparent;
                 display: block;
@@ -96,8 +96,14 @@
                 border-radius: 50%;
                 background-color: #a04db1;
                 // background-image: url();
+                transform:translateY(0rem);
+                transition: transform ease-out .2s;
                 
             }
+        }
+        .selected{
+            position: relative;
+            transform:translateY(-1rem);
         }
     }
 }

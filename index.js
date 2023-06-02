@@ -102,11 +102,28 @@ var observerRight = new IntersectionObserver(function (entries, observer) {
   // rootMargin: '0px',
   threshold: .3
 });
+var observerUrl = new IntersectionObserver(function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      if (entry.target.id == "projects") window.location.hash = "projects";
+      if (entry.target.id == "about") window.location.hash = "about";
+      if (entry.target.id == "home") window.location.hash = "home";
+      if (entry.target.id == "knowledge") window.location.hash = "knowledge";
+    }
+  });
+}, {
+  // rootMargin: '0px',
+  threshold: .5
+});
 function io_cards_anim() {
   // cards_knowledge.forEach(card=>{
   //     if( card.className?.includes('knowlege_card'))
   //         observer.observe(card)
   // })
+  observerUrl.observe(document.querySelector("#home"));
+  observerUrl.observe(document.querySelector("#knowledge"));
+  observerUrl.observe(document.querySelector("#about"));
+  observerUrl.observe(document.querySelector("#projects"));
   observerRight.observe(knowledge);
   cards_projects.forEach(function (card) {
     var _card$className;
@@ -118,6 +135,12 @@ function io_cards_anim() {
 // EXTERNAL MODULE: ./src/helpers/copy_clipboard.js
 var copy_clipboard = __webpack_require__(210);
 ;// CONCATENATED MODULE: ./src/index.js
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 
 
 
@@ -162,8 +185,52 @@ window.onhashchange = function (e) {
   //     currentColor
   // }
 
-  name != '#' && name != '#_' && name != '#home' && name != '#about' && name != '#projects' && name != '#knowledge'; // && RenderKnowlege(app, name, data)
-}; // window.onload = (e) => {
+  name != '#' && name != '#_' && name != '#home' && name != '#about' && name != '#projects' && name != '#knowledge';
+
+  switch (name) {
+    case "#home":
+      menuSelected(".menu_home");
+      break;
+
+    case "#projects":
+      menuSelected(".menu_projects");
+      break;
+
+    case "#knowledge":
+      menuSelected(".menu_knowledge");
+      break;
+
+    case "#about":
+      menuSelected(".menu_about");
+      break;
+  }
+};
+
+function removeChildClass(childNode, className) {
+  var _iterator = _createForOfIteratorHelper(childNode),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var node = _step.value;
+
+      if (node.classList) {
+        node.childNodes[1].classList.remove(className);
+      }
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+}
+
+function menuSelected(qSelected) {
+  var menu = document.getElementById("menu").getElementsByTagName("ul")[0];
+  removeChildClass(menu.childNodes, "selected");
+  var element = document.querySelector(qSelected);
+  element.classList.add("selected");
+} // window.onload = (e) => {
 //     // window.location.hash = ''
 // }
 })();

@@ -21,10 +21,16 @@ html {
     // scroll-snap-type: y proximity;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    width: 100vw;
+    position: inherit;
 }
 body{
 
     background-color: $background_body;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 // .body {
@@ -142,6 +148,8 @@ main {
     margin-top: 2rem;
     background-color: $background_body;
     padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header_charge b span {

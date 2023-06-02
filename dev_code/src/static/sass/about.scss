@@ -12,10 +12,13 @@ $text_resalt_color_green: #A6E99B;
 .about{
     font-family: 'Noto Sans', sans-serif;
     color: $text_color_white;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10rem;
     margin-bottom: 2rem;
     position: relative;
     opacity: 0;
+    width: 58rem;
     // background-color: aliceblue;
     box-shadow: 5px 5px 5px #292a30;
     h2{

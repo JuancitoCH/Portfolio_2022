@@ -47,6 +47,7 @@ intersectionob()
 window.onhashchange = (e) => {
     e.preventDefault()
     const name = window.location.hash
+    
     // const data = {
     //     mousePointer,
     //     currentColor
@@ -54,7 +55,39 @@ window.onhashchange = (e) => {
     name != '#' && name!='#_' && 
     name != '#home' && name!='#about'
     && name!='#projects' && name!='#knowledge'
-        // && RenderKnowlege(app, name, data)
+
+   switch(name){
+    case "#home":
+            menuSelected(".menu_home")
+        break;
+    case "#projects":
+        menuSelected(".menu_projects")
+
+        break;
+    case "#knowledge":
+        menuSelected(".menu_knowledge")
+
+        break;
+    case "#about":
+        menuSelected(".menu_about")
+        break;
+   }
+}
+
+function removeChildClass(childNode,className){
+    for(const node of childNode){
+        if(node.classList){
+            
+            node.childNodes[1].classList.remove(className)
+        }
+
+    }
+}
+function menuSelected(qSelected){
+    const menu = document.getElementById("menu").getElementsByTagName("ul")[0]
+    removeChildClass(menu.childNodes,"selected")
+    const element = document.querySelector(qSelected)
+    element.classList.add("selected")
 }
 // window.onload = (e) => {
 //     // window.location.hash = ''

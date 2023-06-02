@@ -34,6 +34,20 @@ const observerRight = new IntersectionObserver((entries,observer)=>{
     // rootMargin: '0px',
     threshold: .3
 })
+const observerUrl = new IntersectionObserver((entries,observer)=>{
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            if(entry.target.id == "projects") window.location.hash = "projects"
+            if(entry.target.id == "about") window.location.hash = "about"
+            if(entry.target.id == "home") window.location.hash = "home"
+            if(entry.target.id == "knowledge") window.location.hash = "knowledge"
+        }
+    })
+
+},{
+    // rootMargin: '0px',
+    threshold: .5
+})
 
 export default function io_cards_anim(){
 
@@ -41,6 +55,11 @@ export default function io_cards_anim(){
     //     if( card.className?.includes('knowlege_card'))
     //         observer.observe(card)
     // })
+    observerUrl.observe(document.querySelector("#home"))
+    observerUrl.observe(document.querySelector("#knowledge"))
+    observerUrl.observe(document.querySelector("#about"))
+    observerUrl.observe(document.querySelector("#projects"))
+
     observerRight.observe(knowledge)
     cards_projects.forEach(card=>{
         if( card.className?.includes('one_project_v2'))

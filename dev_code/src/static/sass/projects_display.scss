@@ -103,7 +103,10 @@ $text_resalt_color_violet: #715AFF;
 // }
 
 
-
+#projects{
+  margin-left: auto;
+  margin-right: auto;
+}
 // ------------------
 
 .projects_v2 {
@@ -126,11 +129,11 @@ $text_resalt_color_violet: #715AFF;
     color: $text_color_white;
     padding: 1rem;
     overflow: hidden;
-
+    
 
     // backdrop-filter: blur(10px);
     // backdrop-filter:opacity(20%);
-    width: 25rem;
+    width: 20rem;
     border-radius: 5px;
 
     .project_link_anchor{
