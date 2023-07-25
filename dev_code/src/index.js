@@ -15,7 +15,7 @@ import intersectionob from './js_components_anim/intersectionob'
 import './helpers/copy_clipboard.js'
 
 
-// alert("This Project is in development")
+alert("This Project is updating, sorry for the inconvenience.")
 
 
 const app = document.querySelector('#app')

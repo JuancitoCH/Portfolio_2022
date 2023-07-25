@@ -153,8 +153,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  // import RenderKnowlege from './pages/RenderKnowlege'
 // helper functions
 
- // alert("This Project is in development")
 
+alert("This Project is updating, sorry for the inconvenience.");
 var app = document.querySelector('#app'); // Animation
 
 io_cards_anim(); // Routing
